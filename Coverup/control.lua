@@ -18,8 +18,6 @@ local function RemoveOres(surface, x, y)
   if radius < 0 then radius = 0 end
   if radius > 10 then radius = 10 end
   
-  game.print(radius)
-  
   local ents = surface.find_entities_filtered{area = {{x + 0.1 - radius, y + 0.1 - radius},{x + 0.9 + radius, y + 0.9 + radius}}, type = "resource"}
   if #ents > 0 then
     if settings.global["coverup-permanent"].value then
