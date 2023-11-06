@@ -1,0 +1,9 @@
+{
+  "name": "Coverup-Fixed",
+  "version": "%version%",
+  "title": "Coverup-Fixed",
+  "author": "Werbad, W1102",
+  "homepage": "",
+  "description": "Makes concrete and stone paths hide ores.",
+  "factorio_version": "1.1"
+}
