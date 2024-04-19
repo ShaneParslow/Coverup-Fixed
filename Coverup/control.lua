@@ -29,7 +29,10 @@ local function RemoveOres(surface, x, y)
     else
       local surface2 = game.surfaces[surface.name.."__hiddenores__"]
       if not surface2 then
-        surface2 = game.create_surface(surface.name.."__hiddenores__")
+        local gen_settings = {water=0,
+          default_enable_all_autoplace_controls=false
+          }
+        surface2 = game.create_surface(surface.name.."__hiddenores__", gen_settings)
       end
       for _,res in pairs(ents) do
         if IsCovered(res, surface, radius) then
