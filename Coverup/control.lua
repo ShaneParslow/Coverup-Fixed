@@ -60,7 +60,7 @@ local function RestoreOres(surface, surface2, x, y)
 end
 
 script.on_event(defines.events.on_player_built_tile, function(event)
-  local tile = event.item.place_as_tile_result.result
+  local tile = event.tile
   
   if tile.mineable_properties.minable then
     local surface = game.surfaces[event.surface_index]
@@ -84,7 +84,7 @@ end)
 
 
 script.on_event(defines.events.on_robot_built_tile, function(event)
-  local tile = event.item.place_as_tile_result.result
+  local tile = event.tile
   local robot = event.robot
   
   if tile.mineable_properties.minable then
